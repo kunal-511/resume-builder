@@ -13,7 +13,7 @@ const ChooseTemplate: React.FC = () => {
           <Link
             to="/template1"
             className="text-center font-semibold text-xl"
-            target="_blank"
+            
           >
             Template1
             <img
@@ -27,7 +27,7 @@ const ChooseTemplate: React.FC = () => {
           <Link
             className="text-center font-semibold text-xl"
             to="/template2"
-            target="_blank"
+            
           >
             Template 2
             <img

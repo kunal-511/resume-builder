@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Services from "./Components/Services";
@@ -13,17 +13,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-      <Route path="/resume-builder/" element={<Home />} />
-        <Route path="/resume-builder/about" element= {<About />} />
-        <Route path="/resume-builder/services" element= {<Services />} />
-        <Route path="/resume-builder/contact" element= {<ContactUs />} />
-        <Route path="/resume-builder/template1" element= {<Template1 />} />
-        <Route path="/resume-builder/template2" element= {<Template2 />} />
-        {/* The following route will match exactly "/resume-builder" */}
-        <Route
-          path="/"
-          element={<Navigate to="/resume-builder" replace />}
-        />
+        <Route path="/resume-builder" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/template1" element={<Template1 />} />
+        <Route path="/template2" element={<Template2 />} />
       </Routes>
       <Footer />
     </Router>
