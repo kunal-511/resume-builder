@@ -11,7 +11,7 @@ const ChooseTemplate: React.FC = () => {
       <div className="flex justify-evenly mt-2 items-center h-[100vh]">
         <div className=" imgBox flex flex-col">
           <Link
-            to="/resume-builder/template1"
+            to="/template1"
             className="text-center font-semibold text-xl"
             
           >
@@ -26,7 +26,7 @@ const ChooseTemplate: React.FC = () => {
         <div className=" imgBox flex flex-col">
           <Link
             className="text-center font-semibold text-xl"
-            to="/resume-builder/template2"
+            to="/template2"
             
           >
             Template 2

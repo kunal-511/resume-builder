@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <h1 className=" font-semibold text-4xl hover:text-purple-200"> <Link to="/"> Resume Builder</Link></h1>
         <ul className="flex space-x-5 text-xl">
           <li className=" hover:text-purple-200">
-            <Link to="/resume-builder">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className=" hover:text-purple-200" >
             <Link to="/about">About</Link>
