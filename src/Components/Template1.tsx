@@ -12,10 +12,18 @@ interface FormData {
   about: string;
   phone: number;
   address: string;
-  skill1: string; // Changed from skil11
-  skill2: string; // Changed from skil12
-  skill3: string; // Changed from skil13
-  skill4: string; // Changed from skil14
+  skill1: string; 
+  skill2: string; 
+  skill3: string; 
+  skill4: string; 
+  skill5: string; 
+  skill6: string; 
+  skill7: string; 
+  skill8: string; 
+  history1: string;
+  history2: string;
+  history3: string;
+  history4: string;
   ed1: string;
   affilation1: string;
   affilation2: string;
@@ -33,6 +41,14 @@ function Template1() {
     skill2: "",
     skill3: "",
     skill4: "",
+    skill5: "",
+    skill6: "",
+    skill7: "",
+    skill8: "",
+    history1: "",
+    history2: "",
+    history3: "",
+    history4: "",
     ed1: "",
     affilation1: "",
     affilation2: "",
@@ -55,8 +71,8 @@ function Template1() {
   };
 
   useEffect(() => {
-    // Load data from local storage when the component mounts
-    const savedData = localStorage.getItem("formData"); // Use the correct key here
+    
+    const savedData = localStorage.getItem("formData");
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
@@ -65,7 +81,7 @@ function Template1() {
     }, 4000);
 
     return () => clearTimeout(timer);
-  }, []); // The empty dependency array ensures this effect runs only once on component mount
+  }, []); 
 
   if (showAlternateComponent) {
     return (
@@ -89,40 +105,23 @@ function Template1() {
               </p>
               <div className="border-b-2 border-slate-600 mt-4 Hline "></div>
               <p className="mt-4 text-slate-900 text-[1rem]  ">
-                {formData.about} Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Culpa quibusdam obcaecati ipsum officiis,
-                reprehenderit at pariatur consectetur eaque enim impedit sequi
-                aspernatur illum optio sed nobis dolorum exercitationem
-                reiciendis ex nihil minima iure vel eligendi maiores. Laudantium
+                {formData.about} 
               </p>
             </div>
             <div className="mt-6">
               <p className="uppercase font-bold text-3xl mainHead">work history</p>
               <div className="border-b-2 border-slate-600 mt-4 Hline"></div>
               <p className="mt-4 text-slate-900 text-[1rem] ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In est
-                aperiam rerum m Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt ipsum reprehenderit commodi nisi
-                itaque neque deserunt quaerat voluptas dicta. Vero aut libero
-                blanditiis incidunt fuga doloribus, nemo aliquid laudantium
-                mollitia minus similique natus reiciendis reprehenderit odio
-                voluptatibus quidem doloremque. Maxime, esse recusandae
+               {formData.history1}
               </p>
               <p className="mt-4 text-slate-900 text-[1rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In est
-                aperiam rerum Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Laboriosam voluptatibus excepturi quibusdam iusto illo?
-                Soluta, possimus! Quia praesentium accusamus omnis, fugit cumque
-                porro eius ipsam quibusdam adipisci. Assumenda distinctio vitae
-                ab vel dolor inventore ipsum quam aperiam, sunt explicabo,
+              {formData.history2}
               </p>
               <p className="mt-4 text-slate-900 text-[1rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In est
-                aperiam rerum Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Amet vero, accusantium rerum nostrum deserunt
-                soluta odio eligendi dolores ex voluptatibus? Architecto vero
-                provident soluta nobis perferendis cum, accusantium totam
-                similique doloremque molestiae natus, corporis quis quas
+              {formData.history3}
+              </p>
+              <p>
+              {formData.history4}
               </p>
             </div>
           </div>
@@ -155,6 +154,10 @@ function Template1() {
                 <li>{formData.skill2}</li>
                 <li>{formData.skill3}</li>
                 <li>{formData.skill4}</li>
+                <li>{formData.skill5}</li>
+                <li>{formData.skill6}</li>
+                <li>{formData.skill7}</li>
+                <li>{formData.skill8}</li>
               </ul>
             </div>
             <div className="mt-8 heads ">
@@ -162,9 +165,7 @@ function Template1() {
               <div className="border-b-2 border-white mr-12  mt-1 mb-4 "></div>
               <ul className="px-12 ml-4 list-disc ">
                 <li>{formData.ed1}</li>
-                {/* <li>Dugar</li>
-              <li>Dugar</li>
-              <li>Dugar</li> */}
+               
               </ul>
             </div>
             <div className="mt-8 heads ">
@@ -175,8 +176,7 @@ function Template1() {
               <ul className="px-12 ml-4 list-disc ">
                 <li>{formData.affilation1}</li>
                 <li>{formData.affilation2}</li>
-                {/* <li>Dugar</li>
-              <li>Dugar</li> */}
+          
               </ul>
             </div>
           </div>

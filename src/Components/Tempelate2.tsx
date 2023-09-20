@@ -9,10 +9,18 @@ interface FormData {
   about: string;
   phone: number;
   address: string;
-  skill1: string; // Changed from skil11
-  skill2: string; // Changed from skil12
-  skill3: string; // Changed from skil13
-  skill4: string; // Changed from skil14
+  skill1: string; 
+  skill2: string; 
+  skill3: string; 
+  skill4: string; 
+  skill5: string; 
+  skill6: string; 
+  skill7: string; 
+  skill8: string; 
+  history1: string;
+  history2: string;
+  history3: string;
+  history4: string;
   ed1: string;
   affilation1: string;
   affilation2: string;
@@ -29,6 +37,14 @@ const Template2: React.FC = () => {
     skill2: "",
     skill3: "",
     skill4: "",
+    skill5: "",
+    skill6: "",
+    skill7: "",
+    skill8: "",
+    history1: "",
+    history2: "",
+    history3: "",
+    history4: "",
     ed1: "",
     affilation1: "",
     affilation2: "",
@@ -114,10 +130,10 @@ const Template2: React.FC = () => {
               </ul>
 
               <ul className="flex flex-col">
-                <li>skills</li>
-                <li>skills</li>
-                <li>skills</li>
-                <li>skills</li>
+                <li>{formData.skill5}</li>
+                <li>{formData.skill6}</li>
+                <li>{formData.skill7}</li>
+                <li>{formData.skill8}</li>
               </ul>
             </p>
           </div>
@@ -148,12 +164,16 @@ const Template2: React.FC = () => {
               Work History
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates velit mollitia quam voluptatibus harum animi, dolorem
-              unde corrupti, repellat officia sequi voluptate illum odit amet
-              impedit quas ipsa quaerat modi nulla vel illo qui autem dolores.
-              Accusantium aspernatur cupiditate quisquam eos minima error quas
-              saepe distinctio illum, illo
+      {formData.history1}
+            </p>
+            <p>
+      {formData.history2}
+            </p>
+            <p>
+      {formData.history3}
+            </p>
+            <p>
+      {formData.history4}
             </p>
           </div>
           <div className="flex mt-4  mb-12    ">
