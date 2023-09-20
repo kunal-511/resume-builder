@@ -70,20 +70,22 @@ function Services() {
   } else {
     return (
       <div className="pt-8 mt-4 text-center bg-custom1">
-        <h1 className=" uppercase">Resume Builder Form</h1>
-        <div className="flex">
-          <img className="w-[30%] hidden" src={background} alt="" />
+        <h1 className=" uppercase text-4xl text-white  text-center pb-8   ">
+          Resume Builder Form
+        </h1>
+        
+          <img className=" hidden" src={background} alt="" />
           <form
-            className=" w-[70%] px-4  text-white text-[1.2rem] flex flex-col justify-center "
+            className=" px-4  text-white text-[1.2rem] flex flex-col justify-center "
             onSubmit={handleSubmit}
           >
-            <div className="flex">
-              <div className=" py-2">
+            <div className="flex person ">
+              <div className=" py-2 flex justify-start mr-10">
                 <label className="pr-2 cursor-pointer" htmlFor="fname">
                   First Name:
                 </label>
                 <input
-                  className="w-[50%] text-black border-2 border-black rounded-md "
+                  className=" text-black border-2 border-black rounded-md "
                   type="text"
                   id="fname"
                   name="fname"
@@ -91,12 +93,12 @@ function Services() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className=" py-2">
+              <div className=" py-2 flex justify-start ">
                 <label htmlFor="lname" className="pr-2 cursor-pointer">
                   Last Name:
                 </label>
                 <input
-                  className="w-[50%] text-black border-2 border-black rounded-md"
+                  className=" text-black border-2 border-black rounded-md"
                   type="text"
                   id="lname"
                   name="lname"
@@ -111,7 +113,7 @@ function Services() {
                   Phone Number:
                 </label>
                 <input
-                  className="w-[30%] text-black  border-2 border-black rounded-md"
+                  className=" text-black  border-2 border-black rounded-md"
                   type="number"
                   id="phone"
                   name="phone"
@@ -124,7 +126,7 @@ function Services() {
                   Email:
                 </label>
                 <input
-                  className="w-[30%] text-black border-2 border-black rounded-md"
+                  className=" text-black border-2 border-black rounded-md"
                   type="email"
                   id="email"
                   name="email"
@@ -137,7 +139,7 @@ function Services() {
                   Address:
                 </label>
                 <input
-                  className="w-[30%] text-black  border-2 border-black rounded-md"
+                  className=" text-black  border-2 border-black rounded-md"
                   type="text"
                   id="address"
                   name="address"
@@ -150,7 +152,7 @@ function Services() {
                   About:
                 </label>
                 <input
-                  className="w-[30%]  border-2 text-black border-black rounded-md"
+                  className="  border-2 text-black border-black rounded-md"
                   type="text"
                   id="about"
                   name="about"
@@ -159,7 +161,7 @@ function Services() {
                 />
               </div>
             </div>
-            <div className="flex space-x-3 my-2 ">
+            <div className="flex space-x-3 my-2 skills ">
               <div>
                 <label htmlFor="skill1" className="cursor-pointer">
                   Skill1:
@@ -220,7 +222,9 @@ function Services() {
                 add more skils
               </button>
             </div>
-            <div className={moreSkills ? "block" : "hidden"}>
+            <div
+  className={` ${moreSkills ? "block" : "hidden"} flex space-x-3 my-2 skills`}
+>
               <div>
                 <label htmlFor="skill5" className="cursor-pointer">
                   Skill5:
@@ -248,7 +252,7 @@ function Services() {
                 />
               </div>
               <div>
-                <label htmlFor="skill3" className="cursor-pointer">
+                <label htmlFor="skill7" className="cursor-pointer">
                   Skill7:
                 </label>
                 <input
@@ -374,16 +378,16 @@ function Services() {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex justify-center mb-4">
               <button
                 type="submit"
-                className="border-2  border-black p-2 w-[8rem]  hover:bg-gray-200 hover:text-black"
+                className="border-2  border-black p-2 w-[10rem] rounded-xl bg-purple-500    hover:bg-gray-200 hover:text-black"
               >
                 Submit
               </button>
             </div>
           </form>
-        </div>
+        
       </div>
     );
   }
