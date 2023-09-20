@@ -10,21 +10,18 @@ const Footer: React.FC = () => {
             Resume Builder
           </p>
           <p className="flex justify-evenly mt-4 cursor-pointer text-lg">
-
             <BsInstagram /> <BsFacebook /> <BsTwitter />
           </p>
         </div>
         <div>
           <ul className="space-y-2 space ">
             <li>
-
               <Link to="/"> Home </Link>
             </li>
             <li>
               <Link to="/contact"> Contact Us </Link>
             </li>
             <li>
-
               <Link to="/about"> About </Link>
             </li>
           </ul>
@@ -55,7 +52,6 @@ const Footer: React.FC = () => {
       <div className="flex justify-between mt-4 text-xs flex-wrap  ">
         <p>© 2019 Something All Rights Reserved</p>
         <div className="flex justify-evenly space-x-4">
-       
           <p className="underline cursor-pointer">Privacy Policy </p>
           <p className="underline cursor-pointer">Terms Of Use</p>
         </div>

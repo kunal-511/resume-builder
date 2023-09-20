@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img1 from "../assets/carouselImg.png" ;
+import img1 from "../assets/carouselImg.png";
 import img2 from "../assets/images.png";
-import vg from "../assets/2.webp"
+import vg from "../assets/2.webp";
 
 const Home: React.FC = () => {
   return (
@@ -23,18 +23,13 @@ const MyCarousel: React.FC = () => {
         showStatus={false}
         showThumbs={false}
       >
-        {/* Add your slides here */}
         <div>
           <img className="" src={img1} alt="Slide 1" />
-          {/* <p className="legend">Slide 1</p> */}
         </div>
 
         <div>
           <img className="" src={img2} alt="Slide 2" />
-          {/* <p className="legend">Slide 2</p> */}
         </div>
-
-   
       </Carousel>
 
       <div className="w-full home2 h-full bg-custom1 my-20 px-12 flex justify-center items-center   ">

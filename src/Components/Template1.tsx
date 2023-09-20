@@ -12,14 +12,14 @@ interface FormData {
   about: string;
   phone: number;
   address: string;
-  skill1: string; 
-  skill2: string; 
-  skill3: string; 
-  skill4: string; 
-  skill5: string; 
-  skill6: string; 
-  skill7: string; 
-  skill8: string; 
+  skill1: string;
+  skill2: string;
+  skill3: string;
+  skill4: string;
+  skill5: string;
+  skill6: string;
+  skill7: string;
+  skill8: string;
   history1: string;
   history2: string;
   history3: string;
@@ -71,7 +71,6 @@ function Template1() {
   };
 
   useEffect(() => {
-    
     const savedData = localStorage.getItem("formData");
     if (savedData) {
       setFormData(JSON.parse(savedData));
@@ -81,7 +80,7 @@ function Template1() {
     }, 4000);
 
     return () => clearTimeout(timer);
-  }, []); 
+  }, []);
 
   if (showAlternateComponent) {
     return (
@@ -95,7 +94,6 @@ function Template1() {
         <div className="flex" ref={divToConvertRef}>
           <div className="w-[70%]  p-12 bg-white text-slate-600">
             <h1 className="text-5xl font-bold uppercase mainHead">
-           
               {formData.fname} {formData.lname}
             </h1>
             <div className="border-b-2 border-slate-600 mt-4 Hline "></div>
@@ -105,24 +103,24 @@ function Template1() {
               </p>
               <div className="border-b-2 border-slate-600 mt-4 Hline "></div>
               <p className="mt-4 text-slate-900 text-[1rem]  ">
-                {formData.about} 
+                {formData.about}
               </p>
             </div>
             <div className="mt-6">
-              <p className="uppercase font-bold text-3xl mainHead">work history</p>
+              <p className="uppercase font-bold text-3xl mainHead">
+                work history
+              </p>
               <div className="border-b-2 border-slate-600 mt-4 Hline"></div>
               <p className="mt-4 text-slate-900 text-[1rem] ">
-               {formData.history1}
+                {formData.history1}
               </p>
               <p className="mt-4 text-slate-900 text-[1rem]">
-              {formData.history2}
+                {formData.history2}
               </p>
               <p className="mt-4 text-slate-900 text-[1rem]">
-              {formData.history3}
+                {formData.history3}
               </p>
-              <p>
-              {formData.history4}
-              </p>
+              <p>{formData.history4}</p>
             </div>
           </div>
           <div className="w-[30%]   bg-slate-500 text-white">
@@ -161,11 +159,12 @@ function Template1() {
               </ul>
             </div>
             <div className="mt-8 heads ">
-              <p className="uppercase text-2xl font-bold px-12 heads ">Education</p>
+              <p className="uppercase text-2xl font-bold px-12 heads ">
+                Education
+              </p>
               <div className="border-b-2 border-white mr-12  mt-1 mb-4 "></div>
               <ul className="px-12 ml-4 list-disc ">
                 <li>{formData.ed1}</li>
-               
               </ul>
             </div>
             <div className="mt-8 heads ">
@@ -176,7 +175,6 @@ function Template1() {
               <ul className="px-12 ml-4 list-disc ">
                 <li>{formData.affilation1}</li>
                 <li>{formData.affilation2}</li>
-          
               </ul>
             </div>
           </div>

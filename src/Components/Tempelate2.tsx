@@ -9,14 +9,14 @@ interface FormData {
   about: string;
   phone: number;
   address: string;
-  skill1: string; 
-  skill2: string; 
-  skill3: string; 
-  skill4: string; 
-  skill5: string; 
-  skill6: string; 
-  skill7: string; 
-  skill8: string; 
+  skill1: string;
+  skill2: string;
+  skill3: string;
+  skill4: string;
+  skill5: string;
+  skill6: string;
+  skill7: string;
+  skill8: string;
   history1: string;
   history2: string;
   history3: string;
@@ -92,7 +92,7 @@ const Template2: React.FC = () => {
         <div className="px-12" ref={divToConvertRef}>
           <div className="flex  mt-12 justify-between top ">
             <h1 className="flex uppercase font-medium text-5xl">
-              {formData.fname} 
+              {formData.fname}
               <span className="ml-2 text-red-600"> {formData.lname} </span>
             </h1>
             <div className=" flex flex-col items-center">
@@ -107,14 +107,7 @@ const Template2: React.FC = () => {
               Professional summary
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates velit mollitia quam voluptatibus harum animi, dolorem
-              unde corrupti, repellat officia sequi voluptate illum odit amet
-              impedit quas ipsa quaerat modi nulla vel illo qui autem dolores.
-              Accusantium aspernatur cupiditate quisquam eos minima error quas
-              saepe distinctio illum, illo placeat voluptates, neque ullam
-              voluptatibus inventore laborum aperiam modi temporibus atque
-              assumenda.{formData.about}
+             .{formData.about}
             </p>
           </div>
           <div className="flex mt-4  container  ">
@@ -163,18 +156,10 @@ const Template2: React.FC = () => {
             <p className="uppercase text-slate-300 font-bold text-xl mr-[10rem] ">
               Work History
             </p>
-            <p>
-      {formData.history1}
-            </p>
-            <p>
-      {formData.history2}
-            </p>
-            <p>
-      {formData.history3}
-            </p>
-            <p>
-      {formData.history4}
-            </p>
+            <p>{formData.history1}</p>
+            <p>{formData.history2}</p>
+            <p>{formData.history3}</p>
+            <p>{formData.history4}</p>
           </div>
           <div className="flex mt-4  mb-12    ">
             <p className="uppercase text-slate-300 font-bold text-xl mr-[8rem] ">

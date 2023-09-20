@@ -63,10 +63,6 @@ body {
   }
 }
 
-/* .imgBox{
-    position: relative;
-    overflow: hidden;
-  } */
 .templateImg:hover {
   transform: scale(1.02);
 }
@@ -174,19 +170,3 @@ width: 100%;
   margin-top: 0.2rem;
  }
 }
-/* @media screen and (max-width: 1040px) {
-  .about {
-    height: 190vh;
-  }
-  .about div {
-    height: 180vh;
-  }
-}
-@media screen and (max-width: 700px) {
-  .anout {
-    height: 330vh;
-  }
-  .about div {
-    height: 320vh;
-  }
-} */

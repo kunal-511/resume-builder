@@ -10,11 +10,7 @@ const ChooseTemplate: React.FC = () => {
       </h2>
       <div className="flex justify-evenly mt-2 items-center h-[100vh]">
         <div className=" imgBox flex flex-col">
-          <Link
-            to="/template1"
-            className="text-center font-semibold text-xl"
-            
-          >
+          <Link to="/template1" className="text-center font-semibold text-xl">
             Template1
             <img
               src={template1Img}
@@ -24,11 +20,7 @@ const ChooseTemplate: React.FC = () => {
           </Link>
         </div>
         <div className=" imgBox flex flex-col">
-          <Link
-            className="text-center font-semibold text-xl"
-            to="/template2"
-            
-          >
+          <Link className="text-center font-semibold text-xl" to="/template2">
             Template 2
             <img
               className="w-[18rem] templateImg border-solid border-2 border-purple-500  mt-2"
