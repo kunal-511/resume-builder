@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img1 from "../assets/carouselImg.png" ;
 import img2 from "../assets/images.png";
-import vg from "C:/Users/Hp/OneDrive/Desktop/full web devleopment/ReactJs_2/React-projects/project1/src/Assets/2.webp";
+import vg from "../assets/2.webp"
 
 const Home: React.FC = () => {
   return (
