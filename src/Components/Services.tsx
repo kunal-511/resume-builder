@@ -72,7 +72,7 @@ function Services() {
       <div className="pt-8 mt-4 text-center bg-custom1">
         <h1 className=" uppercase">Resume Builder Form</h1>
         <div className="flex">
-          {/* <img className="w-[30%]" src={background} alt="" /> */}
+          <img className="w-[30%] hidden" src={background} alt="" />
           <form
             className=" w-[70%] px-4  text-white text-[1.2rem] flex flex-col justify-center "
             onSubmit={handleSubmit}
