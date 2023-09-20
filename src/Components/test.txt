@@ -1,0 +1,136 @@
+// src/Form.tsx
+import React, { useState, useEffect } from "react";
+
+import ChooseTemplate from "./ChooseTempelate";
+function Services() {
+
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    about: "",
+    phone: "",
+    address: "",
+    skills1 :"",
+  });
+  const [showOptions, setShowOptions] = useState(false);
+
+  useEffect(() => {
+    // Load data from local storage when the component mounts
+    const savedData = localStorage.getItem("formData");
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+
+      // Save the updated data to local storage
+      localStorage.setItem(
+        "formData",
+        JSON.stringify({ ...formData, [name]: value })
+      );
+    };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowOptions(true);
+  };
+ 
+  if (showOptions) {
+    return (
+      <>
+      <ChooseTemplate />
+      </>
+    );
+  } else {
+    return (
+      <div className="mt-8 text-center">
+        <h1 className="bg-custom1">User Data Form</h1>
+        <form className="bg-custom1" onSubmit={handleSubmit}>
+          <div className="flex justify-center item-center py-2">
+            <label htmlFor="name">Name:</label>
+            <input className="w-[30%]"
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="flex justify-center items-center  my-2">
+            <label htmlFor="phone" >Phone Number:</label>
+            <input className="w-[30%]"
+              type="number"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="flex justify-center item-center my-2">
+            <label htmlFor="email">Email:</label>
+            <input className="w-[30%]"
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="flex justify-center item-center my-2">
+            <label htmlFor="address">Address:</label>
+            <input className="w-[30%]"
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="flex justify-center item-center my-2">
+            <label htmlFor="about">About:</label>
+            <input className="w-[30%]"
+              type="text"
+              id="about"
+              name="about"
+              value={formData.about}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+  <label htmlFor="skills1">Skills:</label>
+  <input
+    type="text"
+    id="skills1"
+    name="skills1" // Make sure the name attribute is "skills1" without spaces
+    value={formData.skills1}
+    onChange={handleInputChange}
+  />
+
+</div>
+
+
+          <button type="submit" className="border-2 border-black p-2 w-[8rem]  hover:bg-gray-200 hover:text-black">Submit</button>
+        </form>
+
+        <div>
+          <h2>User Data:</h2>
+          <p>Name: {formData.name}</p>
+          <p>Email: {formData.email}</p>
+          <p>About: {formData.about}</p>
+          <p>Phone: {formData.phone}</p>
+          <p>Address: {formData.address}</p>
+          <p>Address: {formData.skills1}</p>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Services;
