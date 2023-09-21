@@ -2,8 +2,34 @@
 import React, { useState, useEffect } from "react";
 import background from "../assets/background.jpg";
 import ChooseTemplate from "./ChooseTempelate";
+
+
+interface FormData {
+  fname: string;
+  lname: string;
+  email: string;
+  about: string;
+  phone: string;
+  address: string;
+  skill1: string;
+  skill2: string;
+  skill3: string;
+  skill4: string;
+  skill5: string;
+  skill6: string;
+  skill7: string;
+  skill8: string;
+  history1: string;
+  history2: string;
+  history3: string;
+  history4: string;
+  ed1: string;
+  affilation1: string;
+  affilation2: string;
+}
+
 function Services() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     fname: "",
     lname: "",
     email: "",

@@ -1,6 +1,5 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
 
 * {
@@ -89,17 +88,17 @@ body {
   .animation {
     height: 20rem;
   }
-  .skills{
+  .skills {
     flex-wrap: wrap;
   }
-  .skills div{
+  .skills div {
     margin-top: 0.5rem;
   }
-  .person{
+  .person {
     flex-direction: column;
   }
-  .person div:nth-child(1){
-margin-right: 1px;
+  .person div:nth-child(1) {
+    margin-right: 1px;
   }
 }
 @media (max-width: 615px) {
@@ -112,7 +111,6 @@ margin-right: 1px;
   .space {
     margin-top: 1rem;
   }
-  
 }
 @media (max-width: 550px) {
   .heads p {
@@ -126,25 +124,25 @@ margin-right: 1px;
     text-align: center;
     margin-bottom: 1rem;
   }
-  .home2{
+  .home2 {
     flex-direction: column;
-    padding-left:1.5rem ;
-    padding-right:1.5rem ;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-  .home2 img{
-width: 100%;
+  .home2 img {
+    width: 100%;
   }
-  .home2 div{
+  .home2 div {
     width: 100%;
     padding: 1rem;
     height: 75vh;
   }
-  .mainHead{
+  .mainHead {
     font-size: 1.5rem;
-      }
-      .Hline{
-        margin-top: 0.5rem;
-      }
+  }
+  .Hline {
+    margin-top: 0.5rem;
+  }
 }
 @media (max-width: 500px) {
   .nav ul li:nth-child(4) {
@@ -159,7 +157,6 @@ width: 100%;
   .home2 div {
     width: 100%;
   }
-  
 }
 @media (max-width: 450px) {
   .heads p {
@@ -175,10 +172,10 @@ width: 100%;
   }
 }
 @media (max-width: 415px) {
- .mainHead{
-  font-size: 1.1rem;
- }
- .Hline{
-  margin-top: 0.2rem;
- }
+  .mainHead {
+    font-size: 1.1rem;
+  }
+  .Hline {
+    margin-top: 0.2rem;
+  }
 }
