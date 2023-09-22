@@ -66,10 +66,10 @@ const Template2: React.FC = () => {
     }
   };
 
-  // ... rest of your component code
+  
   useEffect(() => {
-    // Load data from local storage when the component mounts
-    const savedData = localStorage.getItem("formData"); // Use the correct key here
+
+    const savedData = localStorage.getItem("formData"); 
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
@@ -78,7 +78,7 @@ const Template2: React.FC = () => {
     }, 4000);
 
     return () => clearTimeout(timer);
-  }, []); // The empty dependency array ensures this effect runs only once on component mount
+  }, []); 
 
   if (showAlternateComponent) {
     return (
